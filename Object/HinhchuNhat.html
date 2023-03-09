@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="hcn" height="1000px" width="1000px"></canvas>
+<script>
+    class rectangle {
+        constructor(width, heigth){
+            this.width = width;
+            this.setWidth  = function (width){
+                this.width = width;
+            }
+            this.heigth = heigth;
+            this.setHeigth = function (heigth){
+                this.heigth = heigth;
+            }
+
+            this.getAcreage = function (){
+                return width * heigth;
+            }
+            this.getPerimeter = function (){
+                return (width + heigth) * 2;
+            }
+        }
+    }
+let ad = new rectangle(600, 300);
+    let width = ad.width;
+    let heigth = ad.heigth
+    let canvas = document.getElementById("hcn");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    ctx.fillRect(60, 90, width, heigth);
+
+
+</script>
+</body>
+</html>
